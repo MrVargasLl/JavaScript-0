@@ -5,6 +5,7 @@
 1) Introducccion a JavaScript es el archivo **tipos-de-dato.js**
 2) Comparaciones y decisiones en JavaScript **DesiciIF.js**
 3) Arreglos y cliclos en JavaScript **Clasifruta.js**
+4) Funciones en JavaScript **Seguimiento.js**
 
 **Archivos de practicas de las clases:**
 
