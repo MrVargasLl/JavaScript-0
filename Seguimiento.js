@@ -34,9 +34,15 @@ Libro4.Autor = 'Carlos Fuentes';
 
 let Deseos = [Libro1, Libro2, Libro3, Libro4]
 
+
 console.log('Total de libros que desea leer: ');
 
-console.log(Deseos);
+Deseos.forEach(function(E1,i,Seguimientos) {
+console.log('Titulo:', E1.Titulo,'   Autor:', E1.Autor);})
+
+//console.log('Total de libros que desea leer: ');
+
+//console.log(Deseos);
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -69,10 +75,24 @@ let Libros = [Beloved, PedroPáramo]
 
 //console.log(Libros);
 
+//Agregar un libro al array
 
-//Declarar un arreglo de objetos "Libros" con información sobre diferentes libros que aún no se han leído.
+function agregarLibro(Titulo,Autor,book) {
+    const libro = new Object();
+    libro.Titulo=Titulo;
+    libro.Autor=Autor
+    book.push(libro);
+    console.log('Libro añadido: ');
+    console.log('Titulo:', libro.Titulo, 'Autor:',libro.Autor );
+}
+
+agregarLibro('Aura', 'Carlos Fuentes',Libros)
+
+//Declarar un arreglo de objetos "Libros".
 
 let Seguimientos = [ ]
+
+// Función de Seguimiento de libros
 
 function Seguimiento(Deseo,Cumplidos,Segui) {
     Deseo.forEach(function(E1,i,Deseo) {
@@ -84,9 +104,13 @@ function Seguimiento(Deseo,Cumplidos,Segui) {
     })
 }
 
-Seguimiento(Deseos,Libros,Seguimientos);
+function mostrarLibrosLeidos () {
+
+    Seguimiento(Deseos,Libros,Seguimientos);
 
 console.log('Solamente ha leido: ');
+Seguimientos.forEach(function(E1,i,Seguimientos) {
+console.log('Titulo:', E1.Titulo,'   Autor:', E1.Autor);})
+}
 
-console.log(Seguimientos);
-
+mostrarLibrosLeidos ()
