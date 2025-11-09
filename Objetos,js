@@ -1,30 +1,28 @@
 const Libros = {
 
-    Libro_1 : { Titulo: 'Beloved', Autor: 'Toni Morrison' },
-    Libro_2 : { Titulo: 'Azul', Autor: 'Rubén Darío' },
-    Libro_3 : { Titulo: 'Pedro Páramo', Autor: 'Juan Rulfo' },
-    Libro_4 : { Titulo: 'Aura', Autor: 'Carlos Fuentes' },
+    Libro_1 : { Titulo: 'Beloved', Autor: 'Toni Morrison', año: 1987, Estado: 'Prestado' },
+    Libro_2 : { Titulo: 'Azul', Autor: 'Rubén Darío', año: 1898, Estado: 'Disponible'  },
+    Libro_3 : { Titulo: 'Pedro Páramo', Autor: 'Juan Rulfo', año: 1955, Estado: 'Prestado'  },
+    Libro_4 : { Titulo: 'Aura', Autor: 'Carlos Fuentes', año: 1962, Estado: 'Disponible'  },
 
 
-    MostrarPersonas: function(){ 
+    describirLibro: function(){ 
+
+        console.log('Información básica de los libros:');
+        console.log('');
         
         for (let j in Libros) { // Leyendo el objeto Libros
 
                 if (typeof Libros[j] !== 'function'){ // Consultando que mi objeto no sea una funcion
 
-                    console.log(`${j}` + ':'); 
+                    //console.log(`${j}` + ':'); 
                     
-
                     let Aux = Libros[j];
-
-                    for (let i in Aux) { // Leyendo cada Libro dentro del otro objeto 'Libros'
-                            
-                            console.log(`${i}: ${Aux[i]}`); // Imprimiendo Datos de cada persona
-                            
-                            
-                    }
+                    
+                    console.log(`El libro titulado "${Aux.Titulo}", escrito por ${Aux.Autor}, en el año ${Aux.año}, el estado es: ${Aux.Estado}. `);
+                                        
                 
-                console.log('');
+                
 
             }
         }
@@ -33,4 +31,4 @@ const Libros = {
     } 
 }
 
-Libros.MostrarPersonas();
+Libros.describirLibro();
