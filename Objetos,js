@@ -4,12 +4,11 @@ const Libros = {
     Libro_2 : { Titulo: 'Azul', Autor: 'Rubén Darío' },
     Libro_3 : { Titulo: 'Pedro Páramo', Autor: 'Juan Rulfo' },
     Libro_4 : { Titulo: 'Aura', Autor: 'Carlos Fuentes' },
-    //Persona1: {Nombre:"Ivan", edad: 24},
-    //Persona2: {Nombre:'Pedro', edad: 35},
+
 
     MostrarPersonas: function(){ 
         
-        for (let j in Libros) { // Leyendo el objeto personas
+        for (let j in Libros) { // Leyendo el objeto Libros
 
                 if (typeof Libros[j] !== 'function'){ // Consultando que mi objeto no sea una funcion
 
@@ -18,7 +17,7 @@ const Libros = {
 
                     let Aux = Libros[j];
 
-                    for (let i in Aux) { // Leyendo cada objeto dentro del otro objeto
+                    for (let i in Aux) { // Leyendo cada Libro dentro del otro objeto 'Libros'
                             
                             console.log(`${i}: ${Aux[i]}`); // Imprimiendo Datos de cada persona
                             
