@@ -6,6 +6,7 @@
 2) Comparaciones y decisiones en JavaScript **DesiciIF.js**
 3) Arreglos y cliclos en JavaScript **Clasifruta.js**
 4) Funciones en JavaScript **Seguimiento.js**
+5) Introducción a Objetos en JavaScript **Objetos,js**
 
 **Archivos de practicas de las clases:**
 
